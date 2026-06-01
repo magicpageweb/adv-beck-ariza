@@ -27,11 +27,13 @@ export default function Footer() {
           {/* Col 1 — Branding */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <img 
-                src="/LogoADV-branco.webp" 
-                alt="Francis Beck & Rafael Ariza Advocacia" 
-                className="h-16 w-auto"
-              />
+              <a href="#home" aria-label="Ir para o topo" className="inline-block transition-transform hover:scale-[1.02] duration-300">
+                <img 
+                  src="/LogoADV-branco.webp" 
+                  alt="Francis Beck & Rafael Ariza Advocacia" 
+                  className="h-16 w-auto"
+                />
+              </a>
             </div>
             <p className="font-sans text-sm leading-relaxed text-slate-400 mb-6">
               Escritório de referência em Direito Penal e Processual Penal. Atuação especializada, personalizada e pautada na mais absoluta confidencialidade.
@@ -132,7 +134,13 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
             <div className="font-sans text-xs text-slate-500 text-center md:text-left">
-              <p>&copy; {year} Francis Beck &amp; Rafael Ariza Advocacia. Todos os direitos reservados.</p>
+              <p>
+                &copy; {year}{' '}
+                <a href="#home" className="text-gold-500 hover:text-gold-400 transition-colors duration-300">
+                  Francis Beck &amp; Rafael Ariza Advocacia
+                </a>
+                . Todos os direitos reservados.
+              </p>
             </div>
             <div className="flex flex-wrap items-center justify-center md:justify-end gap-5 text-xs font-sans">
               <a href="#" className="text-slate-500 hover:text-gold-400 transition-colors duration-300 tracking-wide">
@@ -151,7 +159,7 @@ export default function Footer() {
           
           {/* Developer signature */}
           <div className="text-center font-sans text-[10px] uppercase tracking-widest text-slate-600">
-            Desenvolvido por <span className="text-gold-600/80">MagicPage Websites</span>
+            Desenvolvido por <a href="https://www.magicpage.com.br" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-slate-400 transition-colors duration-300">MagicPage Websites</a>
           </div>
 
           {/* Confidentiality notice */}
