@@ -13,7 +13,24 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    
+    if (name === 'phone') {
+      let v = value.replace(/\D/g, '');
+      if (v.length > 11) v = v.substring(0, 11);
+      
+      if (v.length > 10) {
+        v = v.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+      } else if (v.length > 6) {
+        v = v.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+      } else if (v.length > 2) {
+        v = v.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+      }
+      
+      setForm(prev => ({ ...prev, phone: v }));
+    } else {
+      setForm(prev => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -96,6 +113,9 @@ export default function Contact() {
                     value={form.phone}
                     onChange={handleChange}
                     placeholder=" "
+                    required
+                    minLength={14}
+                    maxLength={15}
                     className="w-full bg-transparent border-0 border-b border-slate-200 py-3 px-0 text-navy-900 font-sans text-sm focus:outline-none focus:border-gold-600 transition-colors duration-300 peer"
                   />
                   <label
