@@ -3,6 +3,20 @@ import { ChevronRight } from 'lucide-react';
 
 const areas = [
   {
+    id: 'compliance',
+    label: 'Compliance e Investigações Internas',
+    shortLabel: 'Compliance',
+    items: [
+      'Programas de compliance penal e anticorrupção',
+      'Due diligence penal em fusões e aquisições',
+      'Investigações internas corporativas',
+      'Assessoria a Comitês de Ética e Auditoria',
+      'Gestão de crise e resposta a incidentes',
+      'Treinamentos corporativos em compliance',
+      'Soluções de prevenção à lavagem de dinheiro (PLD/FT)',
+    ],
+  },
+  {
     id: 'economica',
     label: 'Criminalidade Econômica e Empresarial',
     shortLabel: 'Criminalidade Econômica',
@@ -52,24 +66,10 @@ const areas = [
       'Procedimentos sancionadores tributários',
     ],
   },
-  {
-    id: 'compliance',
-    label: 'Compliance e Investigações Internas',
-    shortLabel: 'Compliance',
-    items: [
-      'Programas de compliance penal e anticorrupção',
-      'Due diligence penal em fusões e aquisições',
-      'Investigações internas corporativas',
-      'Assessoria a Comitês de Ética e Auditoria',
-      'Gestão de crise e resposta a incidentes',
-      'Treinamentos corporativos em compliance',
-      'Soluções de prevenção à lavagem de dinheiro (PLD/FT)',
-    ],
-  },
 ];
 
 export default function PracticeAreas() {
-  const [activeTab, setActiveTab] = useState('economica');
+  const [activeTab, setActiveTab] = useState('compliance');
   const activeArea = areas.find(a => a.id === activeTab)!;
 
   return (
