@@ -129,7 +129,7 @@ export default function PracticeAreas() {
 
           {/* Item list */}
           <div>
-            <ul className="space-y-0">
+            <ul className={activeArea.id === 'economica' ? "grid grid-cols-1 md:grid-cols-2 gap-x-4" : "space-y-0"}>
               {activeArea.items.map((item, i) => (
                 <li
                   key={i}
