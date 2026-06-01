@@ -130,10 +130,13 @@ export default function Footer() {
       {/* Divider */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-5 text-xs font-sans">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+            <div className="font-sans text-xs text-slate-500 text-center md:text-left">
+              <p>&copy; {year} Francis Beck &amp; Rafael Ariza Advocacia. Todos os direitos reservados.</p>
+            </div>
+            <div className="flex flex-wrap items-center justify-center md:justify-end gap-5 text-xs font-sans">
               <a href="#" className="text-slate-500 hover:text-gold-400 transition-colors duration-300 tracking-wide">
-                Política de Privacidade
+                Ética Profissional
               </a>
               <span className="text-slate-700">|</span>
               <a href="#" className="text-slate-500 hover:text-gold-400 transition-colors duration-300 tracking-wide">
@@ -141,13 +144,14 @@ export default function Footer() {
               </a>
               <span className="text-slate-700">|</span>
               <a href="#" className="text-slate-500 hover:text-gold-400 transition-colors duration-300 tracking-wide">
-                Ética Profissional
+                Política de Privacidade
               </a>
             </div>
-            <div className="font-sans text-xs text-slate-600 text-center space-y-1">
-              <p>&copy; {year} Francis Beck &amp; Rafael Ariza Advocacia. Todos os direitos reservados.</p>
-              <p>Desenvolvido por <span className="text-gold-500">MagicPage Websites</span></p>
-            </div>
+          </div>
+          
+          {/* Developer signature */}
+          <div className="text-center font-sans text-[10px] uppercase tracking-widest text-slate-600">
+            Desenvolvido por <span className="text-gold-600/80">MagicPage Websites</span>
           </div>
 
           {/* Confidentiality notice */}

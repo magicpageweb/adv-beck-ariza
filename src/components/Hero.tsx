@@ -34,9 +34,9 @@ export default function Hero() {
         }}
       />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-navy-900/70" />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-900/80 via-navy-900/60 to-transparent" />
+      <div className="absolute inset-0 bg-navy-900/40" />
+      {/* Gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-900/70 via-navy-900/40 to-transparent" />
 
       {/* Gold accent line left */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-gold-600 to-transparent opacity-60" />
